@@ -2,6 +2,8 @@ package sbu.cs;
 
 public class App {
 
+
+
     /**
      * use this function for magical machine question.
      *
