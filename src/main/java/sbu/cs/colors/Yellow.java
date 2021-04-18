@@ -2,31 +2,24 @@ package sbu.cs.colors;
 
 import sbu.cs.functions.BlackFunc;
 
-public class Green extends HandleColor
+public class Yellow extends HandleColor
 {
     private String input;
     private String output;
 
-    //set and get
-    public Green(int action)
+    public Yellow(int action)
     {
         super(action);
     }
 
-    public void setInput(String input)
-    {
-        this.input = input;
-    }
-    //b
-    public void setOutput(String input)
+    public void setOutput(String output)
     {
         this.input = input;
         this.output = BlackFunc.functionsRender(input, super.getAction());
     }
 
-    public String getOutput()
+    public String getOutPut()
     {
         return output;
     }
-
 }

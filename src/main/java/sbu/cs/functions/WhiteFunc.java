@@ -105,6 +105,4 @@ public class WhiteFunc
 
         return out;
     }
-
-
 }
