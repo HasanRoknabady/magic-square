@@ -156,7 +156,31 @@ public class SortArray {
      * @param value value to be find
      * @return position of value in arr. -1 if not exists
      */
-    public int binarySearch(int[] arr, int value) {
+    public int binarySearch(int[] arr, int value)
+    {
+        int highIndex = arr.length - 1;
+        int lowPointer = 0;
+
+        while (lowPointer <= highIndex)
+        {
+            int mid = lowPointer + (highIndex - lowPointer) / 2;
+
+            if (arr[mid] == value)
+            {
+                return mid;
+            }
+            //if value was greater than mid(checkIdx) pointer +1
+            if (arr[mid] < value)
+            {
+                lowPointer = mid + 1;
+            }
+            //if value was lower than mid pointer -1
+            if (arr[mid] > value)
+            {
+                highIndex = mid - 1;
+            }
+        }
+        //if value not found return -1
         return -1;
     }
 
@@ -168,7 +192,32 @@ public class SortArray {
      * @param value value to be find
      * @return position of value in arr. -1 if not exists
      */
-    public int binarySearchRecursive(int[] arr, int value) {
-        return -1;
+    public int binarySearchRecursive(int[] arr, int value)
+    {
+        return binarySearchRecursive(arr, value, 0, arr.length - 1);
+    }
+    public int binarySearchRecursive(int[] arr, int value, int low, int high)
+    {
+        int mid = (high + low) / 2;
+
+        if (high < low)
+        {
+            return -1;
+        }
+        //if value was greater than mid(checkIdx) pointer +1
+        else if (arr[mid] == value)
+        {
+            return mid;
+        }
+        //if value was lower than mid pointer -1
+        else if (arr[mid] < value)
+        {
+            return binarySearchRecursive(arr, value, mid + 1, high);
+        }
+        else if (arr[mid] > value)
+        {
+            return binarySearchRecursive(arr, value, low, mid - 1);
+        }
+        else return -1;
     }
 }
