@@ -13,16 +13,19 @@ public class Pink extends HandleColor
         super(action);
     }
 
-    public void setInputs(String inputFromLeft, String inputFromUp)
+    public void setInputFromLeft(String inputFromLeft)
     {
         this.inputFromLeft = inputFromLeft;
-        this.inputFromUp = inputFromUp;
+    }
 
-        this.output = WhiteFunc.functionsRender(inputFromLeft, inputFromUp, super.getAction());
+    public void setInputFromUp(String inputFromUp)
+    {
+        this.inputFromUp = inputFromUp;
     }
 
     public String getOutput()
     {
+        this.output = WhiteFunc.functionsRender(inputFromLeft, inputFromUp, super.getAction());
         return output;
     }
 

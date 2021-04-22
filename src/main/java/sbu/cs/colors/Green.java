@@ -17,15 +17,10 @@ public class Green extends HandleColor
     {
         this.input = input;
     }
-    //b
-    public void setOutput(String input)
-    {
-        this.input = input;
-        this.output = BlackFunc.functionsRender(input, super.getAction());
-    }
 
     public String getOutput()
     {
+        this.output = BlackFunc.functionsRender(input, super.getAction());
         return output;
     }
 

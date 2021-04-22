@@ -12,25 +12,25 @@ public class Blue extends HandleColor
         super(action);
     }
 
-    public void setOutputToDown(String inputFromUp)
-    {
-        this.inputFromUp = inputFromUp;
-        this.outputToDown = BlackFunc.functionsRender(inputFromUp, super.getAction());
-    }
-
     public String getOutputToDown()
     {
+        this.outputToDown = BlackFunc.functionsRender(inputFromUp, super.getAction());
         return outputToDown;
+    }
+
+    public void setInputFromUp(String inputFromUp)
+    {
+        this.inputFromUp = inputFromUp;
     }
 
     public void setOutputToRight(String inputFromLeft)
     {
         this.inputFromLeft = inputFromLeft;
-        this.outputToRight = BlackFunc.functionsRender(inputFromLeft, super.getAction());
     }
 
     public String getOutputToRight()
     {
+        this.outputToRight = BlackFunc.functionsRender(inputFromLeft, super.getAction());
         return outputToRight;
     }
 

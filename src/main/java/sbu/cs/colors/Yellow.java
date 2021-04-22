@@ -12,14 +12,15 @@ public class Yellow extends HandleColor
         super(action);
     }
 
-    public void setOutput(String output)
+    public void setInput(String input)
     {
         this.input = input;
-        this.output = BlackFunc.functionsRender(input, super.getAction());
     }
 
-    public String getOutPut()
+    public String getOutput()
     {
+        this.output = BlackFunc.functionsRender(input, super.getAction());
         return output;
     }
+
 }
