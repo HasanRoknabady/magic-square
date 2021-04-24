@@ -77,7 +77,7 @@ class SortArrayTest {
 
     @Test
     void binarySearchOdd() {
-        int[] arr = {1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144};
+        int[] arr = {1, 2, 3, 5, 8, 13, 21,  34, 55, 89, 144};
         assertEquals(instance.binarySearch(arr, 34), 7);
     }
 
